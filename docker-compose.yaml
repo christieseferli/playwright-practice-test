@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  playwright-test:
+    image: playwright-test
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    command: npm run pageObjects-chrome
+    # the fles from "/app/playwright-report" will be copied 
+    # inside the local folder "./playwright-report"
+    volumes:
+      - ./playwright-report/:/app/playwright-report
+      - ./test-results/:/app/test-results
