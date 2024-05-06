@@ -1,0 +1,66 @@
+// compile project
+npm start
+
+// Install playwright
+npm init playwright@latest
+
+// Run playwright in UI mode
+npx playwright test --ui
+
+// RUN playwright with custom configuration file
+npx playwright test --config=playwright-prod.config.ts
+
+// playwright command which are configured into package.json
+npm run pageObjects-chrome
+npm run pageObjects-chrome && npm run pageObjects-firefox // with && run tests sequential
+npm run pageObjects-chrome & npm run pageObjects-firefox // with & run tests in parallel
+
+// playwright commands:
+
+  338  npx playwright test
+  339  npx playwright show-report
+  340  npx playwright test --project=chromium
+  341  npx playwright test --project=chromium --headed
+  342  npx playwright test example.spec.ts  --project=chromium
+  343  npx playwright test -g "has title"  --project=chromium
+  344  npx playwright show-report
+  345  npx playwright test -g "has title"  --project=chromium
+  346  npx playwright test  --project=chromium
+  347  npx playwright show-report
+  348  npx playwright test  --project=chromium
+  349  npx playwright show-report
+  350  npx playwright test --ui
+  351  npx playwright test --project=chromium --trace on
+  352  npx playwright test --project=chromium --debug
+
+  // update all pre-created snapshots
+  npx playwright test --update-snapshots
+
+  // run with test tags:
+  npx playwright test --project=chromium --grep @smoke
+    npx playwright test --project=chromium --grep "@smoke|@bloke" // run tests with 2 different tags
+    npx playwright test --project=chromium --grep --% "@smoke^|@bloke" // run from powershell
+
+
+  // Javascript advice:
+  keep locator inside the methods instead creating new fields and 
+  assign those to a constractor
+  
+  // Documentation
+
+  // List of Autowaiting methods
+  https://playwright.dev/docs/actionability
+
+  // install library
+  npm i @faker-js/faker --save-dev --force
+
+  // install allure reporter in linux
+  sudo dpkg -i allure_2.24.0-1_all.deb
+  sudo apt-get update
+  sudo apt-get install allure
+  npm i allure-playwright
+  allure generate my-allure-results -o allure-report --clean
+
+
+  // docker commands:
+  

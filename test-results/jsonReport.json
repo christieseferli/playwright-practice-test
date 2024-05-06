@@ -1,0 +1,129 @@
+{
+  "config": {
+    "configFile": "/app/playwright.config.ts",
+    "rootDir": "/app/tests",
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {},
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "json",
+        {
+          "outputFile": "test-results/jsonReport.json"
+        }
+      ],
+      [
+        "junit",
+        {
+          "outputFile": "test-results/junitReport.xml"
+        }
+      ],
+      [
+        "html",
+        null
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 15000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "/app/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/app/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 10000
+      },
+      {
+        "outputDir": "/app/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "/app/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 10000
+      },
+      {
+        "outputDir": "/app/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "id": "webkit",
+        "name": "webkit",
+        "testDir": "/app/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 10000
+      },
+      {
+        "outputDir": "/app/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "id": "pageObjectFullScreen",
+        "name": "pageObjectFullScreen",
+        "testDir": "/app/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "usePageObjects.spec.ts"
+        ],
+        "timeout": 10000
+      },
+      {
+        "outputDir": "/app/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "id": "mobile",
+        "name": "mobile",
+        "testDir": "/app/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "testMobile.spec.ts"
+        ],
+        "timeout": 10000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "version": "1.43.0",
+    "workers": 4,
+    "webServer": {
+      "command": "npm run start",
+      "url": "http://localhost:4200"
+    }
+  },
+  "suites": [],
+  "errors": [
+    {
+      "message": "Error: Timed out waiting 60000ms from config.webServer.",
+      "stack": "Error: Timed out waiting 60000ms from config.webServer."
+    }
+  ],
+  "stats": {
+    "startTime": "2024-05-06T10:46:07.615Z",
+    "duration": 65917.29100000001,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}
